@@ -1,7 +1,7 @@
 #pragma once
 
 #include "player.h"
-#include "shot.h"
+#include "ShotNormal.h"
 
 class SceneMain
 {
@@ -18,6 +18,9 @@ public:
 	void update();
 	// 毎フレームの描画
 	void draw();
+
+	// 弾の生成
+	bool createShot(Vec2 pos);
 	
 private:
 	// ショットの最大数
@@ -31,5 +34,5 @@ private:
 	// プレイヤー
 	Player m_player;
 	// ショット
-	Shot m_shot[kShotMax];
+	ShotNormal m_shot[kShotMax];
 };
